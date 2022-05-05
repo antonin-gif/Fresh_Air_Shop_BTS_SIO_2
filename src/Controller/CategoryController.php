@@ -14,6 +14,23 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 
 class CategoryController extends AbstractController
 {
+    protected $categoryRepository;
+    public function __construct(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
+
+    public function renderMenuList()
+    {
+        // Cherche les caté dans la bdd
+        $categories = $this->categoryRepository->findAll();
+
+        //Renvoie le html sous la forme d'une Response
+        return $this->render('category/_menu.html.twig', [
+            'categories' => $categories
+        ]);
+    }
+
     /**
      * @Route("/admin/category/create", name="category_create")
      */
