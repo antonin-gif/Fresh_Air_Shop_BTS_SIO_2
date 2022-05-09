@@ -95,9 +95,12 @@ class CartService
         return $total;
     }
 
+    /**
+     * 
+     * @return CartItem[]
+     */
     public function getDetailedCartItems(): array
     {
-
         $session = $this->session->getSession();
 
 
@@ -113,5 +116,11 @@ class CartService
             $detailedCart[] = new CartItem($product, $qty);
         };
         return $detailedCart;
+    }
+
+    public function empty()
+    {
+        $session = $this->session->getSession();
+        $session->set('cart', []);
     }
 }

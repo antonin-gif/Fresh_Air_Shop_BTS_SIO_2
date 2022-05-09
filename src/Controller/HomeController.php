@@ -14,7 +14,7 @@ class HomeController extends AbstractController
     public function homepage(ProductRepository $productRepository)
     {
 
-        $product = $productRepository->findBy([], [], 3);
+        $product = $productRepository->findBy([], [], 4);
 
 
 

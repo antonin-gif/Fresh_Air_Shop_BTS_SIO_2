@@ -16,30 +16,29 @@
 				{% include "product/_product_card.html.twig" with {'p': product} %}
 			</div>
 		{% endfor %}
-
 	</div>
+
 	<hr>
 
 	<h2>Un service irreprochable</h2>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nulla maiores! Quos laboriosam consequuntur ipsum.</p>
 
 	<div class="row">
 		{% include "shared/_assurance.html.twig" with {
             'color': 'primary',
             'icone': 'fas fa-truck',
-            'text': "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, animi! Odio vitae fuga porro dignissimos!"
+            'text': "Une fois la commande effectuée, sous 4 jours ouvrés elle est chez vous !"
         }%}
 
 		{% include "shared/_assurance.html.twig" with {
             'color': 'success',
             'icone': 'fas fa-check',
-            'text': "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, animi! Odio vitae fuga porro dignissimos!"
+            'text': "Grâce à notre équipe passionnée, plus de 9 clients sur 10 sont satisfaits de Fresh Air Shop."
         }%}
 
 		{% include "shared/_assurance.html.twig" with {
             'color': 'warning',
             'icone': 'fas fa-lock',
-            'text': "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, animi! Odio vitae fuga porro dignissimos!"
+            'text': "Sur Fresh Air Shop, les paiements en ligne, rapides, simples, et sécurisés. "
         }%}
 	</div>
 
