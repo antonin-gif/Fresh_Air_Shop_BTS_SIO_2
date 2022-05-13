@@ -53,7 +53,7 @@ Une fois sur le panier, il faut remplir le formulaire pour passer la commande. E
 
 Une fois connecté en tant qu'admin (email = admin@gmail.com et password = password), on a un dropdown Admin. Seulement les liens vers les fonctionnalités d'ajout fonctionnent. Les routes : 
 - pour créer une catégorie : /admin/category/create
-- ajouter un produit : /admin/product/create
+- ajouter un produit : /admin/product/create. Attention : pour l’emplacement de l’image, il faut stocker l’image dans le répertoire public/pictures. Et pour l’adresse de l’image, il faut mettre dans le formulaire « pictures/nom de l’image ».
 - éditer une catégorie : admin/category/*id de la category dans la bdd*/edit
 - éditer un produit : admin/product/*id du produit dans la bdd*/edit
 - la fonctionnalité pour consulter la liste des utilisateurs n'est pas encore implémentée, même si elle figure dans le dropdown
