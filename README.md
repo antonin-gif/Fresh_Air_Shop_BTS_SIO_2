@@ -51,7 +51,7 @@ Une fois sur le panier, il faut remplir le formulaire pour passer la commande. E
 
 #### Quelles sont les droits de l'admin ? (admin)
 
-Une fois connecté en tant qu'admin, on a un dropdown Admin. Seulement les liens vers les fonctionnalités d'ajout fonctionnent. Les routes : 
+Une fois connecté en tant qu'admin (email = admin@gmail.com et password = password), on a un dropdown Admin. Seulement les liens vers les fonctionnalités d'ajout fonctionnent. Les routes : 
 - pour créer une catégorie : /admin/category/create
 - ajouter un produit : /admin/product/create
 - éditer une catégorie : admin/category/*id de la category dans la bdd*/edit
