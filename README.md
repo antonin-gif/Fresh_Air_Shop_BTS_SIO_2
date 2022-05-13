@@ -3,7 +3,7 @@
 
 Voici le guide d'installation.
 
-## Équipement sur lesquel le projet a été développé
+## Équipement sur lequel le projet a été développé
 
 **Symfony:** V. 6.0.8
 
