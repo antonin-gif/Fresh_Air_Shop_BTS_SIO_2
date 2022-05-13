@@ -45,6 +45,10 @@ En étant connecté ou non, on peut visiter les produits par catégories via le 
 
 Vous pouvez mettre des produits dans le panier en n'étant pas connecté et le panier, une fois connecté ou une fois enregistré, le panier est conservé lors d'une même session. La route du panier est /cart. 
 
+#### Comment passer commande ?
+
+Une fois sur le panier, il faut remplir le formulaire pour passer la commande. Et une fois cela effectué, on est redirigé sur la page de l'historique de nos commandes. On peut accéder à cette page directement sur /purchases, ou en cliquant sur le bouton Mes Commandes de la navbar.
+
 #### Quelles sont les droits de l'admin ? (admin)
 
 Une fois connecté en tant qu'admin, on a un dropdown Admin. Seulement les liens vers les fonctionnalités d'ajout fonctionnent. Les routes : 
