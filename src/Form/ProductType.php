@@ -45,9 +45,9 @@ class ProductType extends AbstractType
                 'divisor' => 100,
                 'required' => false
             ])
-            ->add('mainPicture', UrlType::class, [
+            ->add('mainPicture', TextType::class, [
                 'label' => 'Image du produit',
-                'attr' => ['placeholder' => 'Tapez une URL d\'image']
+                'attr' => ['placeholder' => 'Entrez un emplacement d\'image']
             ])
             ->add('category', EntityType::class, [
                 'label' => 'Catégorie',
@@ -57,45 +57,6 @@ class ProductType extends AbstractType
                     return strtoupper($category->getName()); //on affiche en majuscule les categories
                 }
             ]);
-
-        // $builder->get('price')->addModelTransformer(new CentimesTransformer);
-
-        // $builder->addEventListener(FormEvents::POST_SUBMIT, function (FormEvent $event) {
-        //     $product = $event->getData();
-
-        //     if ($product->getPrice() !== null) {
-        //         $product->setPrice($product->getPrice() * 100);
-        //     }
-        // });
-
-        //form.pre_set_data juste avant qu'on positonne les données sur le formulaire
-        //form.post_set_data juste apres qu'on ait donné les informations et qu'elles soient intégrées au formulaire
-        //form.pre_set_data le moment juste avant qu'on ait soumis le formulaire, on est en train d'analyser la requete
-        //form.submit on a pris les données de la requête et on les a transformées de facon à pouvoir les intégrer dans le formulaire
-        //form.post.submit j'ai pris les infos de la requeté, je les ai retravaillées et intégréées dans l'entité product
-        // $builder->addEventListener(FormEvents::PRE_SET_DATA, function (FormEvent $event) {
-        //     $form = $event->getForm();
-
-        //     /** @var Product */ //on indique à vscode que product est un objet de la classe Product
-        //     $product = $event->getData();
-
-        //     //on affiche en euros et non en centimes le prix 
-        //     if ($product->getPrice() !== null) {
-        //         $product->setPrice($product->getPrice() / 100);
-        //     }
-
-        //     // On ne permet pas de changer de catégorie lors de l'edit
-        //     if ($product->getId() === null) {
-        //          $form->add('category', EntityType::class, [
-        //         'label' => 'Catégorie',
-        //         'placeholder' => '--Choisir une catégorie--',
-        //         'class' => Category::class, //on ne peut pas afficher un objet catégorie, on affiche que son nom
-        //         'choice_label' => function (Category $category) {
-        //             return strtoupper($category->getName()); //on affiche en majuscule les categories
-        //         }
-        //     ]);
-        //     }
-        // });
     }
 
     public function configureOptions(OptionsResolver $resolver): void

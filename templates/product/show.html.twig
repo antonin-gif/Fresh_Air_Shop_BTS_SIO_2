@@ -19,12 +19,17 @@
 	</ol>
 
 	<h1>{{product.name}}
-		({{product.price/100}}
-		&euro;)</h1>
+		<span class="prix">
+			({{product.price/100}}
+			&euro;)
+		</span>
+	</h1>
 
 	<div class="row">
 		<div class="col-4">
-			<img class="img-fluid" src="{{asset(product.mainPicture)}}" alt="Image de {{product.name}}">
+			<img
+			class="img-fluid" src="{{asset(product.mainPicture)}}" alt="Image de {{product.name}}">
+		{# <img class="img-fluid" src="{{asset('pictures/soleil.jpg')}}" alt="Image de {{product.name}}"> #}
 		</div>
 		<div class="col">
 			<span class="badge bg-info bg-primary">{{product.category.name}}</span>

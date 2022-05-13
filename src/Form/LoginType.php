@@ -22,7 +22,7 @@ class LoginType extends AbstractType
             ->add('password', PasswordType::class, [
                 'label' => 'Mot de passe',
                 'attr' => [
-                    'placeholder' => 'Mot de passe ...'
+                    'placeholder' => 'Mot de passe'
                 ]
             ]);
     }

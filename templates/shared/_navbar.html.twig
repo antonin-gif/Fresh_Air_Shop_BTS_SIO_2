@@ -19,6 +19,26 @@
 						{% endfor %}
 					</div>
 				</div>
+				{% if app.user %}
+					{% for role in app.user.roles %}
+						{% if role is same as 'ROLE_ADMIN' %}
+							<div class="dropdown">
+								<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Catégories
+								</button>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="{{path('category_create')}}">Ajouter une catégorie</a>
+									<a class="dropdown-item" href="#">Éditer une catégorie</a>
+									<a class="dropdown-item" href="{{path('product_create')}}">Ajouter un produit</a>
+									<a class="dropdown-item" href="#">Éditer un produit</a>
+									<a class="dropdown-item" href="#">Consulter la liste des comptes utilisateurs</a>
+								</div>
+							</div>
+						{% endif %}
+
+					{% endfor %}
+				{% endif %}
+
 			</ul>
 
 
@@ -45,9 +65,9 @@
 						<a href="{{path('security_login')}}" class="btn btn-success">Se connecter</a>
 					</li>
 				{% endif %}
-
-
 			</ul>
+
+
 		</div>
 	</div>
 </nav>

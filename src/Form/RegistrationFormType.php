@@ -31,6 +31,7 @@ class RegistrationFormType extends AbstractType
                         'message' => 'Merci d\'accepter nos conditions d\'utilisations !',
                     ]),
                 ],
+                'label' => "J'accepte les conditions de Fresh Air Shop"
             ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
