@@ -41,11 +41,11 @@ Une fois le compte créé, vous $etes redirigé sur la page du login. La route e
 
 En étant connecté ou non, on peut visiter les produits par catégories via le dropdown Catégories.
 
-### Comment mettre des produits dans son panier ?
+#### Comment mettre des produits dans son panier ?
 
 Vous pouvez mettre des produits dans le panier en n'étant pas connecté et le panier, une fois connecté ou une fois enregistré, le panier est conservé lors d'une même session. La route du panier est /cart. 
 
-### Quelles sont les droits de l'admin ? (admin)
+#### Quelles sont les droits de l'admin ? (admin)
 
 Une fois connecté en tant qu'admin, on a un dropdown Admin. Seulement les liens vers les fonctionnalités d'ajout fonctionnent. Les routes : 
 - pour créer une catégorie : /admin/category/create
