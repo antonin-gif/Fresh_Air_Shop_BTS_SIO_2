@@ -76,6 +76,9 @@ class LoginFormAuthenticator extends AbstractAuthenticator implements Authentica
         );
     }
 
+
+    //cette méthode start permet dans un authenticator donné de rediriger l'utilisateur vers là où il doit aller pour
+    //se connecter lorsqu'il veut accéder à une ressource où il est nécessaire d'etre connecté
     public function start(Request $request, AuthenticationException $authException = null): Response
     {
 

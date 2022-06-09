@@ -5,7 +5,6 @@ namespace App\DataFixtures;
 use Faker\Factory;
 use App\Entity\User;
 use App\Entity\Product;
-use Liior\Faker\Prices;
 use App\Entity\Category;
 use App\Entity\Purchase;
 use App\Entity\PurchaseLine;
@@ -71,7 +70,6 @@ class AppFixtures extends Fixture
 
 
         $faker = Factory::create('fr_FR');
-        $faker->addProvider(new \Liior\Faker\Prices($faker));
         $faker->addProvider(new \Bezhanov\Faker\Provider\Commerce($faker));
         $faker->addProvider(new \Bluemmb\Faker\PicsumPhotosProvider($faker));
 
@@ -118,7 +116,7 @@ class AppFixtures extends Fixture
                     $product = new Product;
                     $product
                         ->setName($canoes[$p])
-                        ->setPrice($faker->price(4000, 20000))
+                        ->setPrice((mt_rand(2000, 30000))) //prix donnés entre 20 et 300 euros
                         ->setSlug(strtolower($this->slugger->slug($product->getName())))
                         ->setCategory($category)
                         ->setShortDescription($descriptionsCanoes[$p])
@@ -136,7 +134,7 @@ class AppFixtures extends Fixture
                     $product = new Product;
                     $product
                         ->setName($bivouac[$p])
-                        ->setPrice($faker->price(4000, 20000))
+                        ->setPrice((mt_rand(2000, 30000)))
                         ->setSlug(strtolower($this->slugger->slug($product->getName())))
                         ->setCategory($category)
                         ->setShortDescription($descriptionsBivouac[$p])
@@ -154,7 +152,7 @@ class AppFixtures extends Fixture
                     $product = new Product;
                     $product
                         ->setName($fishing[$p])
-                        ->setPrice($faker->price(4000, 20000))
+                        ->setPrice((mt_rand(2000, 30000)))
                         ->setSlug(strtolower($this->slugger->slug($product->getName())))
                         ->setCategory($category)
                         ->setShortDescription($descriptionsFishing[$p])
@@ -172,7 +170,7 @@ class AppFixtures extends Fixture
                     $product = new Product;
                     $product
                         ->setName($hiking[$p])
-                        ->setPrice($faker->price(4000, 20000))
+                        ->setPrice(mt_rand(2000, 30000))
                         ->setSlug(strtolower($this->slugger->slug($product->getName())))
                         ->setCategory($category)
                         ->setShortDescription($descriptionsHiking[$p])

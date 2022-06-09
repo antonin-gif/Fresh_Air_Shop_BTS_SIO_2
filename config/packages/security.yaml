@@ -22,10 +22,10 @@ security:
             provider: app_user_provider
             # custom_authenticator: App\Security\LoginFormAuthenticator
             form_login:
-                login_path: security_login
-                check_path: security_login
-                username_parameter: login[email]
-                password_parameter: login[password]
+                login_path: security_login #endroit du formulaire de login
+                check_path: security_login #endroit où on check que les infos sont bien les bonnes
+                username_parameter: login[email] #dans quel paramètre de la requete on trouve le username
+                password_parameter: login[password] #dans quel paramètre de la requete on trouve le password
 
             logout:
                 path: security_logout
